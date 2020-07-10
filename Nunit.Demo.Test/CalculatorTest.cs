@@ -15,6 +15,16 @@ namespace Nunit.Demo.Test
             Assert.AreEqual(8, result);//success
                                  
         }
+        [Test]
+        public void Test_Subtraction_Argument_Exception()
+        {
+            var calc = new Calculator();
+            Assert.Catch<ArgumentException>(() => calc.Subtraction(4, 5));//success
+           // Assert.Catch<ArgumentException>(() => calc.Subtraction(4, 3));//failure
+
+        }
+
+
 
         [Ignore("Ignore test")]
         public void Test_To_Ignore()
