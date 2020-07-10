@@ -32,5 +32,17 @@ namespace Nunit.Demo.Test
 
         }
 
+        [TestCase(1, 2, 3)]
+        [TestCase(2, 3, 5)]
+        [TestCase(3, 4, 7)]
+        public void Test_Addition_Multiple(int first, int second, int expectedresult)
+        {
+            var calc = new Calculator();
+            var calculated = calc.Addition(first, second);
+            Assert.AreEqual(expectedresult, calculated);
+
+        }
+
+
     }
 }
